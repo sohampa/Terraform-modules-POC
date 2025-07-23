@@ -42,13 +42,16 @@ Ensure the following tools and configurations are in place:
 
 ## 📁 Directory Structure
 
+<pre>
 project/
-├── README.md # Project documentation
-├── terraform.tfvars # Variable values (DO NOT commit)
-├── main.tf # Module declarations
-├── variables.tf # Input variable definitions
-├── outputs.tf # Output values
+├── README.md             # Project documentation
+├── terraform.tfvars      # Variable values (DO NOT commit)
+├── main.tf               # Module declarations
+├── variables.tf          # Input variable definitions
+├── outputs.tf            # Output values
 └── modules/
-├── vpc/ # VPC module
-├── rds/ # RDS module
-└── ec2/ # EC2 module
+    ├── vpc/              # VPC module
+    ├── rds/              # RDS module
+    └── ec2/              # EC2 module
+</pre>
+
