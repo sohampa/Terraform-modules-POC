@@ -30,6 +30,12 @@ variable "db_engine" {
   default     = "mysql"
 }
 
+variable "db_name" {
+  description = "Database engine type"
+  type        = string
+  default     = "mysql"
+}
+
 variable "db_engine_version" {
   description = "Database engine version"
   type        = string

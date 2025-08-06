@@ -1,7 +1,7 @@
-# Defining the AWS provider
-provider "aws" {
-  region = var.region
-}
+# # Defining the AWS provider
+# provider "aws" {
+#   region = var.region
+# }
 
 # Creating the VPC
 resource "aws_vpc" "main" {

@@ -40,3 +40,21 @@ variable "http_port" {
   type        = number
   default     = 80
 }
+
+variable "s3_bucket_name" {
+  description = "Name of the S3 bucket containing the JAR file"
+  type        = string
+}
+
+variable "s3_jar_key" {
+  description = "S3 key (path) to the JAR file"
+  type        = string
+}
+
+variable "user_data" {
+  description = "User data script for EC2 instance"
+  type        = string
+}
+variable "instance_profile_name" {
+  
+}

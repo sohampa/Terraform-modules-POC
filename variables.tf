@@ -28,6 +28,13 @@ variable "availability_zones" {
   type        = list(string)
 }
 
+# DB
+variable "db_name" {
+  description = "Database engine type"
+  type        = string
+  default     = "mysql"
+}
+
 variable "db_username" {
   description = "Database admin username"
   type        = string
@@ -55,6 +62,8 @@ variable "multi_az" {
   type        = bool
 }
 
+# for EC2
+
 variable "ami_id" {
   description = "AMI ID for the EC2 instance"
   type        = string
@@ -73,4 +82,14 @@ variable "key_name" {
 variable "http_port" {
   description = "HTTP port for web access"
   type        = number
+}
+
+variable "s3_bucket_name" {
+  description = "Name of the S3 bucket containing the JAR file"
+  type        = string
+}
+
+variable "s3_jar_key" {
+  description = "S3 key (path) to the JAR file"
+  type        = string
 }

@@ -1,7 +1,7 @@
 # Defining the AWS provider
-provider "aws" {
-  region = var.region
-}
+# provider "aws" {
+#   region = var.region
+# }
 
 # Creating DB subnet group
 resource "aws_db_subnet_group" "main" {
@@ -39,7 +39,8 @@ resource "aws_security_group" "rds" {
 
 # Creating RDS instance
 resource "aws_db_instance" "main" {
-  identifier              = "${var.project_name}-rds"
+  identifier              = "soham-rds"
+  db_name                 = var.db_name 
   engine                  = var.db_engine
   engine_version          = var.db_engine_version
   instance_class          = var.db_instance_class

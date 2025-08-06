@@ -1,7 +1,7 @@
 # Defining the AWS provider
-provider "aws" {
-  region = var.region
-}
+# provider "aws" {
+#   region = var.region
+# }
 
 # Creating security group for EC2
 resource "aws_security_group" "ec2" {
@@ -42,6 +42,9 @@ resource "aws_instance" "main" {
   vpc_security_group_ids = [aws_security_group.ec2.id]
   key_name               = var.key_name
   associate_public_ip_address = true
+  iam_instance_profile   =  var.instance_profile_name
+
+  user_data = var.user_data
 
   tags = {
     Name = "${var.project_name}-ec2"
